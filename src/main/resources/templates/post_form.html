@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Nowy wpis</title>
+</head>
+<body>
+<h1>Nowy wpis</h1>
+<form th:action="@{/posts}" th:object="${post}" method="post">
+    <label for="title">Tytuł:</label>
+    <input type="text" id="title" name="title" th:field="*{title}" />
+    <label for="content">Treść:</label>
+    <textarea id="content" name="content" th:field="*{content}"></textarea>
+    <button type="submit">Zapisz</button>
+</form>
+</body>
+</html>
